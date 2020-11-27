@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import * as api from "./utils/api";
 import Header from "./components/Header";
 import CharacterGallery from "./components/CharacterGallery";
+import Search from "./components/Search";
 
 class App extends Component {
   state = {
@@ -16,15 +17,19 @@ class App extends Component {
 
   getAllCharacters = () => {
     api.fetchAllCharacters().then((characters) => {
-      this.setState({characters, isLoading: false})
-    })
+      this.setState({ characters, isLoading: false });
+    });
   };
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Header />
-        <CharacterGallery characters={this.state.characters} isLoading={this.state.isLoading} />
+        <Search />
+        <CharacterGallery
+          characters={this.state.characters}
+          isLoading={this.state.isLoading}
+        />
       </div>
     );
   }

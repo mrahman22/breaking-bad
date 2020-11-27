@@ -1,13 +1,13 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 
-function CharacterGallery({characters, isLoading}) {
+function CharacterGallery({ characters, isLoading }) {
   return isLoading ? (
-    "Loading....."
+    <h1 className="center">Loading......</h1>
   ) : (
     <section className="cards">
       {characters.map((character) => {
-        return <CharacterCard key={character.char_id} character={character}/>
+        return <CharacterCard key={character.char_id} character={character} />;
       })}
     </section>
   );
