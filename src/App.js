@@ -9,23 +9,40 @@ class App extends Component {
   state = {
     characters: [],
     isLoading: true,
+    query: "",
   };
 
   componentDidMount() {
     this.getAllCharacters();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.query !== this.state.query) {
+      api.fetchAllCharacters(this.state.query).then((characters) => {
+        this.setState({ characters, isLoading: false });
+      });
+    }
+  }
+
+  getQuery = (query) => {
+    this.setState({query})
+  }
+
+
   getAllCharacters = () => {
-    api.fetchAllCharacters().then((characters) => {
+    api.fetchAllCharacters(this.state.query).then((characters) => {
       this.setState({ characters, isLoading: false });
     });
   };
+
+
+
 
   render() {
     return (
       <div>
         <Header />
-        <Search />
+        <Search getQuery={this.getQuery}/>
         <CharacterGallery
           characters={this.state.characters}
           isLoading={this.state.isLoading}

@@ -1,10 +1,14 @@
-import axios from "axios"
+import axios from "axios";
 
-
-
-
-export const fetchAllCharacters = () => {
-     return axios.get('https://www.breakingbadapi.com/api/characters').then(({data}) => {
-         return data;
-     })
-}
+export const fetchAllCharacters = (query) => {
+    console.log(query)
+  return axios
+    .get(`https://www.breakingbadapi.com/api/characters`, {
+      params: {
+        "name": query
+      },
+    })
+    .then(({ data }) => {
+      return data;
+    });
+};
