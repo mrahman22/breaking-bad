@@ -124,6 +124,45 @@ input[type='text'] {
   padding-bottom: 10px;
 }
 
+/*============================= Single Character ========================================*/
+
+.single-character h2 {
+  text-align: center;
+  color: red;
+}
+
+.red {
+  color: yellow;
+}
+
+.single-character img {
+  margin-top: 20px;
+  width: 600px;
+  height: 400px;
+}
+
+.single-character ul {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.single-character li {
+  list-style-type: none;
+  padding: 5px;
+  font-size: 20px;
+}
+
+
+.single-character-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*============================= Single Character ========================================*/
+
+
+
 @media (max-width: 800px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
