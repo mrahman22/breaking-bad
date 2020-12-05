@@ -1,9 +1,8 @@
 import axios from "axios";
 
 export const fetchAllCharacters = (query) => {
-    console.log(query)
   return axios
-    .get(`https://www.breakingbadapi.com/api/characters`, {
+    .get(`https://www.breakingbadapi.com/api/characters?limit=20`, {
       params: {
         "name": query
       },
