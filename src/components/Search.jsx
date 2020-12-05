@@ -10,7 +10,7 @@ export default class Search extends Component {
       this.setState({[key]: value})
       this.props.getQuery(value);
   }
-
+z
   render() {
     return (
       <section className="search">

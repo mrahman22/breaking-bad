@@ -1,20 +1,19 @@
 import "./App.css";
-import React, { Component } from "react";
 import Header from "./components/Header";
 import { Router } from "@reach/router";
 import CharacterGallery from "./components/CharacterGallery";
+import SingleCharacter from "./components/SingleCharacter";
 
-class App extends Component {
-  render() {
+function App() {
     return (
       <div>
         <Header />
         <Router>
           <CharacterGallery path="/" />
+          <SingleCharacter path="/characters/:character_id"/>
         </Router>
       </div>
     );
-  }
 }
 
 export default App;
