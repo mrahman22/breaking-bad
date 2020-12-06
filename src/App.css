@@ -128,7 +128,7 @@ input[type='text'] {
 
 .single-character h2 {
   text-align: center;
-  color: red;
+  font-size: 30px;
 }
 
 .red {
@@ -144,18 +144,33 @@ input[type='text'] {
 .single-character ul {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(10, 36, 10);
+  padding: 10px;
 }
 
 .single-character li {
   list-style-type: none;
   padding: 5px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 
 .single-character-container {
   display: flex;
   justify-content: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100px;
 }
 
 
