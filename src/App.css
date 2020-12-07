@@ -137,8 +137,8 @@ input[type='text'] {
 
 .single-character img {
   margin-top: 20px;
-  width: 600px;
-  height: 400px;
+  width: 550px;
+  height: 350px;
 }
 
 .single-character ul {
@@ -146,6 +146,7 @@ input[type='text'] {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  justify-self: start;
   background-color: rgb(10, 36, 10);
   padding: 10px;
 }
@@ -160,6 +161,15 @@ input[type='text'] {
 .single-character-container {
   display: flex;
   justify-content: center;
+}
+
+.single-character p {
+  padding: 3px;
+}
+
+.occupation {
+  margin-top: 5px;
+  color: yellow;
 }
 
 .btn-container {

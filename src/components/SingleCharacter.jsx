@@ -20,7 +20,10 @@ class SingleCharacter extends Component {
   };
 
   render() {
-    const { character } = this.state;
+    const { character, isLoading } = this.state;
+    if(isLoading) return "Loading......"
+
+
     return (
       <>
         <div className="single-character-container">
@@ -37,6 +40,14 @@ class SingleCharacter extends Component {
               <li>
                 <span className="red">Actor:</span> {character.portrayed}
               </li>
+              <p className="occupation">Occupations: </p>
+              {character.occupation.map((job) => {
+                 return (
+                   <p>
+                   {job}
+                   </p>
+                 )
+              })}
             </ul>
           </div>
         </div>
