@@ -14,6 +14,8 @@ class CharacterGallery extends Component {
     this.getAllCharacters();
   }
 
+  // added comment
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.query !== this.state.query) {
       api.fetchAllCharacters(this.state.query).then((characters) => {
